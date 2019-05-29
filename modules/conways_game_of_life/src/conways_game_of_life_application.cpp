@@ -72,7 +72,7 @@ std::string Conwayslife_App::operator()(int argc, const char** argv) {
     }
 
     std::string res;
-    cLife.Start(res, args.epsSteps_);
+    res = cLife.Start(res, args.epsSteps_);
 
     return res;
 }

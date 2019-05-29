@@ -14,7 +14,7 @@ class Conways_life {
 
     void checkNextStep();
     void redraw();
-    void print(std::string &str);
+    std::string print(std::string &str);
 
  public:
     Conways_life(const int w, const int h);
@@ -28,7 +28,7 @@ class Conways_life {
     bool isSystemAlive();
     bool aliveNextStep(const int wi, const int hi);
 
-    void Start(std::string &res, int eps);
+    std::string Start(std::string &res, int eps);
 };
 
 #endif  // MODULES_CONWAYS_GAME_OF_LIFE_INCLUDE_CONWAYS_GAME_OF_LIFE_H_

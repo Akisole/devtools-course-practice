@@ -7,11 +7,11 @@
 #include <string>
 
 class Conwayslife_App {
-public:
+ public:
     Conwayslife_App();
     std::string operator()(int argc, const char** argv);
 
-private:
+ private:
     void help(const char* appname, const char* message = "");
     bool validateNumberOfArguments(int argc, const char** argv);
     std::string message_;
@@ -22,7 +22,6 @@ private:
         int epsSteps_;
         std::vector<int> points_;
     } Arguments;
-
 };
 
 #endif  // MODULES_CONWAYS_GAME_OF_LIFE_INCLUDE_CONWAYS_GAME_OF_LIFE_APPLICATION_H_

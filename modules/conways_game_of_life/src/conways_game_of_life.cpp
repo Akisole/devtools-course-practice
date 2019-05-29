@@ -175,31 +175,36 @@ void Conways_life::stepNextField() {
     redraw();
     checkNextStep();
 }
-void Conways_life::Start(std::string &res, int eps) {
+std::string Conways_life::Start(std::string str, int eps) {
     int steps = 0;
+    std::string res = str;
     if (eps < 0) throw std::string("Wrong epsStep.");
-    print(res);
+    res = print(res);
 
     checkNextStep();
 
     while (isSystemAlive() && (steps < eps - 1)) {
         stepNextField();
-        print(res);
+        res = print(res);
         steps++;
     }
 
     stepNextField();
-    print(res);
+    res = print(res);
+
+    return res;
 }
-void Conways_life::print(std::string &str) {
+std::string Conways_life::print(std::string &str) {
+    std::string res = str;
     for (int i = 0; i < sizeh_; i++) {
         for (int j = 0; j < sizew_; j++) {
-            str += field_[i*sizew_ + j] + " ";
+            res += field_[i*sizew_ + j] + " ";
         }
-        str += "\n";
+        res += "\n";
     }
     for (int i = 0; i < 2 * sizew_; i++) {
-        str += "=";
+        res += "=";
     }
-    str += "\n";
+    res += "\n";
+    return res;
 }
