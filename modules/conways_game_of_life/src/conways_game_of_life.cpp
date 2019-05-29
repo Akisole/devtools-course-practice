@@ -194,7 +194,7 @@ std::string Conways_life::Start(std::string str, int eps) {
 
     return res;
 }
-std::string Conways_life::print(std::string &str) {
+std::string Conways_life::print(std::string str) {
     std::string res = str;
     for (int i = 0; i < sizeh_; i++) {
         for (int j = 0; j < sizew_; j++) {
