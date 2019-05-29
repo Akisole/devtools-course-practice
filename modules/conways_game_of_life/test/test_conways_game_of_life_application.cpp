@@ -10,7 +10,7 @@ using std::vector;
 using std::string;
 
 class Conwayslife_AppTest : public ::testing::Test {
-protected:
+ protected:
     void Act(vector<string> args_) {
         vector<const char*> options;
 
@@ -29,7 +29,7 @@ protected:
         EXPECT_TRUE(RE::PartialMatch(output_, RE(expected)));
     }
     string output_;
-private:
+ private:
     Conwayslife_App app_;
 };
 TEST_F(Conwayslife_AppTest, Do_Print_Help_Without_Arguments) {

@@ -1,5 +1,6 @@
 // Copyright 2019 Logvinenko Alexandra
 
+#include <string>
 #include "include/conways_game_of_life.h"
 
 Conways_life::Conways_life(const int w, const int h) {

@@ -53,7 +53,7 @@ std::string Conwayslife_App::operator()(int argc, const char** argv) {
     try {
         args.sizew_ = parseInt(argv[1]);
         args.sizeh_ = parseInt(argv[2]);
-        args.numOfStartPoint_= parseInt(argv[3]);
+        args.numOfStartPoint_ = parseInt(argv[3]);
         args.epsSteps_ = parseInt(argv[4]);
 
         for (int i = 5; i < 2*args.numOfStartPoint_ + 5; i+=2) {
