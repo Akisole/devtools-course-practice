@@ -67,3 +67,24 @@ TEST_F(Conwayslife_AppTest, Can_Print_Field) {
 
     EXPECT_EQ(output_, res);
 }
+
+TEST_F(Conwayslife_AppTest, Can_Detect_Wrong_Number_Point) {
+    vector<string> args = { "1", "2" , "1" , "1" , "0" };
+
+    Act(args);
+
+    Assert("ERROR: not enough arguments\\..*");
+}
+
+TEST_F(Conwayslife_AppTest, Can_be_executed_until_the_end) {
+    vector<string> args = { "5", "5" , "3", "10" , "1", "1",
+    "2", "1", "3", "3" };
+    std::string res = ". . . . . \n. + + . . \n. . . . . \n. . . + . \n";
+    res += ". . . . . \n==========\n. . . . . \n. . . . . \n. . + . . \n";
+    res += ". . . . . \n. . . . . \n==========\n. . . . . \n";
+    res += ". . . . . \n. . . . . \n. . . . . \n. . . . . \n==========\n";
+
+    Act(args);
+
+    EXPECT_EQ(output_, res);
+}
